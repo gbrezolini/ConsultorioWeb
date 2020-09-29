@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Site de controle e gerenciamento de consultórios médicos" />
+    <meta name="keywords" content="consultorio,web,dentista,médico,controle,fluxo,gerenciamento,agenda" />
+    <title>Consultório Web</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/estilo.css" />
+</head>
+<body>
+    <!--<form name="formularioInsert" action="pacienteLista.html" onsubmit="return validarForm(this);"> aqui não é executado o onsubmit, pois o submit é acionado via javascript-->
+    <form name="formularioInsert" action="pacienteLista.html">
+        <div class="barra">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="../index.html"><img src="../../Images/-dental-png-981_799.png" alt="Dental System" height="90"</a>
+                </div>
+                <div class="nav navbar-nav">
+                    <h2 style="text-align:center; color:#555555;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Dental System&reg;</h2>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="d-flex flex-grow-1">
+                    <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                    <a class="navbar-brand" href="#">Cadastro de Paciente</a>
+                </div>
+                <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <!--<li class="nav-item"><a href="pacienteLista.html" class="nav-link" onclick="javaScript: validar();" onblur="javaScript: onBlurValidation();">Salvar</a></li>-->
+                        <li class="nav-item"><a href="javaScript: submitForm();" class="nav-link">Salvar</a></li>
+                        <li class="nav-item"><a href="pacienteLista.html" class="nav-link">Cancelar</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr />
+            <div>
+                <table class="listaInsert">
+                    <tr>
+                        <th>Nome:</th>
+                        <td><input type="text" id="txtNome" name="nomeCompleto"  size="50" placeholder="Nome completo" /></td>
+                    </tr>
+                    <tr>
+                        <th>CPF:</th>
+                        <td><input type="text" id="txtCpf" placeholder="Ex.: 000.000.000-00" /></td>
+                    </tr>
+                    <tr>
+                        <th>RG:</th>
+                        <td><input type="text" id="txtRg" /></td>
+                    </tr>
+                    <tr>
+                        <th>Endereço:</th>
+                        <td><input type="text" id="txtEndereco" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <th>Número:</th>
+                        <td><input type="number" id="txtNumero" size="20" /></td>
+                    </tr>
+                    <tr>
+                        <th>Bairro:</th>
+                        <td><input type="text" id="txtBairro" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <th>UF:</th>
+                        <td>
+                            <select id="listaEstado">
+                                <option value="" disabled selected>Selecione o estado</option>
+                                <option value="acre">Acre</option>
+                                <option value="alagoas">Alagoas</option>
+                                <option value="amapa">Amapá</option>
+                                <option value="amazonas">Amazonas</option>
+                                <option value="bahia">Bahia</option>
+                                <option value="ceara">Ceará</option>
+                                <option value="espiritoSanto">Espírito Santo</option>
+                                <option value="goias">Goiás</option>
+                                <option value="maranhao">Maranhão</option>
+                                <option value="matoGrosso">Mato Grosso</option>
+                                <option value="matoGrossoSul">Mato Grosso do Sul</option>
+                                <option value="minasGerais">Minas Gerais</option>
+                                <option value="para">Pará</option>
+                                <option value="paraiba">Paraíba</option>
+                                <option value="pernambuco">Pernambuco</option>
+                                <option value="piauí">Piauí</option>
+                                <option value="rioDeJaneiro">Rio de Janeiro</option>
+                                <option value="saoPaulo">São Paulo</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Cidade:</th>
+                        <td>
+                            <select id="listaCidade">
+                                <option value="" disabled selected>Selecione a cidade</option>
+                                <option value="beloHorizonte">Belo Horizonte</option>
+                                <option value="divinopolis">Divinópolis</option>
+                                <option value="montesClaros">Montes Claros</option>
+                                <option value="uberaba">Uberada</option>
+                                <option value="uberlandia">Uberlândia</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Telefone:</th>
+                        <td><input type="text" id="txtTelefone" placeholder="Ex.: (00) 00000-0000" /></td>
+                    </tr>
+                    <tr>
+                        <th>Data nascimento:</th>
+                        <td><input type="date" id="txtDataNascimento" /></td>
+                    </tr>
+                    <tr>
+                        <th>Profissão:</th>
+                        <td><input type="text" id="txtProfissao" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td><input type="email" id="txtEmail" size="50" name="email" /></td>
+                    </tr>
+                    <tr>
+                        <th>Estado Civil:</th>
+                        <td>
+                            <select name="listEstadoCivil" id="listaEstadoCivil">
+                                <option value="" disabled selected>Selecione o estado civil</option>
+                                <option value="solteiro">Solteiro(a)</option>
+                                <option value="casado">Casado(a)</option>
+                                <option value="divorciado">Divorciado(a)</option>
+                                <option value="viuvo">Viúvo(a)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nome do Cônjuge:</th>
+                        <td><input type="text" id="txtNomeConjuge" size="50" /></td>
+                    </tr>
+                    <tr>
+                        <th>Telefone:</th>
+                        <td><input type="text" id="txtTelefone_conj" placeholder="Ex.: (00) 00000-0000" /></td>
+                    </tr>
+                    <tr>
+                        <th>Convênio:</th>
+                        <td>
+                            <select name="listConvenio" id="listConvenio">
+                                <option value="" disabled selected>Selecione o convênio</option>
+                                <option value="particular">Particular</option>
+                                <option value="unimed">Unimed</option>
+                                <option value="saoJoaoDeus">São João de Deus Saúde</option>
+                                <option value="prontomed">Prontomed</option>
+                                <option value="bradesco">Bradesco Saúde</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br /><br /><br />
+            <hr />
+        </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script type="text/javascript" src="../../Script/controls.js"></script>
+    <script type="text/javascript" src="../../Script/validation.js"></script>
+    <script type="text/javascript" src="../../Script/functions.js"></script> 
+
+    <script type="text/javascript">
+
+        $("#txtNome").focus();
+
+        // Executa o submit do form (formulário/página)
+        function submitForm() {
+            if (validarForm(formularioInsert)) {
+                Adicionar();
+
+                document.formularioInsert.submit();
+            }
+        };
+
+
+    </script>
+
+</body>
+</html>
+
+

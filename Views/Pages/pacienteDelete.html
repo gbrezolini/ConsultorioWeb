@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Site de controle e gerenciamento de consultórios médicos" />
+    <meta name="keywords" content="consultorio,web,dentista,médico,controle,fluxo,gerenciamento,agenda" />
+    <title>Consultório Web</title>
+    <link rel="stylesheet" type="text/css" href="../../Content/estilo.css" />
+</head>
+<body>
+    <div class="barra">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="../index.html"><img src="../../Images/-dental-png-981_799.png" alt="Dental System" height="90"</a>
+            </div>
+            <div class="nav navbar-nav">
+                <h2 style="text-align:center; color:#555555;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">Dental System&reg;</h2>
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="d-flex flex-grow-1">
+                <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
+                <a class="navbar-brand" href="#">Cadastro de Paciente</a>
+            </div>
+            <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+                <ul class="navbar-nav ml-auto flex-nowrap">
+                    <li class="nav-item"><a href="pacienteLista.html" class="nav-link" onclick="javaScript: Excluir();">Excluir</a></li>
+                    <li class="nav-item"><a href="pacienteLista.html" class="nav-link">Cancelar</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr />
+        <div>
+            <h2>Deseja excluir o cadastro?</h2>
+        </div>
+        <div>
+            <table class="listaDelete">
+                <tr>
+                    <th>Código:</th>
+                    <td><input type="number" id="txtCodigo" /></td>
+                </tr>
+                <tr>
+                    <th>Nome:</th>
+                    <td><input type="text" id="txtNome" size="50" /></td>
+                </tr>
+                <tr>
+                    <th>CPF:</th>
+                    <td><input type="text" id="txtCpf" /></td>
+                </tr>
+                <tr>
+                    <th>RG:</th>
+                    <td><input type="text" id="txtRg" /></td>
+                </tr>
+                <tr>
+                    <th>Endereço:</th>
+                    <td><input type="text" id="txtEndereco" /></td>
+                </tr>
+                <tr>
+                    <th>Número:</th>
+                    <td><input type="number" id="txtNumero"/></td>
+                </tr>
+                <tr>
+                    <th>Bairro:</th>
+                    <td><input type="text" id="txtBairro" /></td>
+                </tr>
+                <tr>
+                    <th>UF:</th>
+                    <td><input type="text" id="txtEstado" size="2" maxlength="2" /></td>
+                </tr>
+                <tr>
+                    <th>Cidade:</th>
+                    <td><input type="text" id="txtCidade" /></td>
+                </tr>
+                <tr>
+                    <th>Telefone:</th>
+                    <td><input type="text" id="txtTelefone" /></td>
+                </tr>
+                <tr>
+                    <th>Data nascimento:</th>
+                    <td><input type="date" id="txtDataNascimento"/></td>
+                </tr>
+                <tr>
+                    <th>Profissão:</th>
+                    <td><input type="text" id="txtProfissao"/></td>
+                </tr>
+                <tr>
+                    <th>Email:</th>
+                    <td><input type="email" id="txtEmail"/></td>
+                </tr>
+                <tr>
+                    <th>Estado Civil:</th>
+                    <td><input type="text" id="txtEstadoCivil"/></td>
+                </tr>
+                <tr>
+                    <th>Nome do Cônjuge:</th>
+                    <td><input type="text" id="txtNomeConjuge"/></td>
+                </tr>
+                <tr>
+                    <th>Telefone:</th>
+                    <td><input type="text" id="txtTelefone_conj" /></td>
+                </tr>
+                <tr>
+                    <th>Convênio:</th>
+                    <td><input type="text" id="txtConvenio"/></td>
+                </tr>
+            </table>
+        </div>
+        <br /><br /><br />
+        <hr />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+    <script type="text/javascript" src="../../Script/functions.js"></script>
+    <script>
+
+        CarregarCadastro("Excluir");
+
+        $(document).ready(function () {
+            $("input").prop('disabled', true);
+        });
+
+    </script>
+
+</body>
+</html>
+
+
